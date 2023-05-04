@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Speech to Text Converter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .form-group {
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      label {
+        width: 150px;
+        margin-right: 20px;
+        font-weight: bold;
+        line-height: 32px;
+      }
+
+      select,
+      button {
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ddd;
+        cursor: pointer;
+      }
+
+      select {
+        flex-grow: 1;
+      }
+
+      .record-btn {
+        background-color: #4caf50;
+        color: #fff;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+
+      .result {
+        border: 1px solid #ddd;
+        padding: 20px;
+        min-height: 200px;
+      }
+
+      .download-btn {
+        margin-top: 20px;
+      }
+
+      .clear-btn {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Speech to Text Converter</h1>
+      <div class="form-group">
+        <label for="language">Language:</label>
+        <select id="language"></select>
+        <div class="record-btn" onclick="toggleRecording()">
+          <p>Start Recording</p>
+        </div>
+      </div>
+      <div class="result"></div>
+      <button class="download-btn" onclick="download()">Download Text</button>
+      <button class="clear-btn" onclick="clearResult()">Clear Result</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
